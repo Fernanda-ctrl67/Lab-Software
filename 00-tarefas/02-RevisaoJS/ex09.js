@@ -19,3 +19,16 @@
 // Sem desconto
 
 // Mostre o total.
+
+let produto = "miojo"
+let preco = 5
+let quantidade = 1245
+let total =(preco * quantidade)
+console.log (`${total}`);
+
+if (total > 500){
+    console.log(`Desconto de 15%`);
+}
+else{
+    console.log(`Sem desconto`);
+}

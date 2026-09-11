@@ -49,6 +49,37 @@ rl.question("Digite a primeira carta do jogador: ", (j1) => {
 
     //REALIZE O EXERCÍCIO AQUI 🔽
 
+      let jogador1 = j1
+      let jogador2 =j1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+
+
+
+
     rl.close();
   });
 });

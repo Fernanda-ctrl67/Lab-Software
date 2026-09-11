@@ -32,5 +32,6 @@ rl.question("Digite um número: ", (numero) => {
 
   //REALIZE O EXERCÍCIO AQUI 🔽
 
+  
   rl.close();
 });
