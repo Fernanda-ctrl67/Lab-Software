@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Code - Sistema de Pedidos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="painel-pedido">
+        <h2>Burger Code</h2>
+
+        <!-- Visor do pedido atual -->
+        <input type="text" id="visor-pedido" readonly placeholder="Seu pedido aparecerá aqui...">
+
+        <!-- Botões de Produtos e Ações -->
+        <div class="botoes">
+            <!-- Linha 1: Produtos -->
+            <button onclick="adicionarItem('Hambúrguer (R$ 15.00)')">Hambúrguer (R$ 15,00)</button>
+            <button>Batata Frita (R$ 8.00)</button>
+            <button onclick="adicionarItem('Refrigerante (R$ 5.00)')">Refrigerante (R$ 5,00)</button>
+
+            <!-- Linha 2: Ações -->
+            <button onclick="calcularTotal()" class="btn-finalizar">Finalizar Pedido</button>
+            <button class="btn-limpar">Limpar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
