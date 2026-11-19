@@ -16,15 +16,41 @@ function adicionarItem(item) {
 function calcularTotal() {
   let visor = document.getElementById("visor-pedido");
   let textoPedido = visor.value;
+  let total = 0;
 
-  if (textoPedido.includes("Hambúrguer")) {
-    // Exemplo base já pronto para ajudar
-    visor.value = "Total a pagar: R$ 15.00";
+  if (textoPedido === "" || textoPedido.startsWith("Total a pagar:")) {
+    return;
   }
 
-  // Continue a lógica para quando incluir Batata Frita ou Refrigerante...
-}
+  let itens = textoPedido.split(" + ");
+  for (let i = 0; i < itens.length; i++) {
+  let itemAtual = itens[i];
 
+    if (itemAtual.includes("Hambúrguer")) {
+      total += 15.00;
+    }
+    if (itemAtual.includes("Batata Frita")) {
+      total += 8.00;
+    }
+    if (itemAtual.includes("Refrigerante")) {
+      total += 5.00;
+    }
+    if (itemAtual.includes("Maconha")) {
+      total += 115.00;
+    }
+    if (itemAtual.includes("Paçoca")) {
+      total += 1.00;
+    }
+    if (itemAtual.includes("Picanha")) {
+      total += 67.00;
+    }
+  }
+    visor.value = "Total a pagar: R$ " + total.toFixed(2).replace(".", ",");
+  }
 // ====================================================
 // EXERCÍCIO 3: Crie a função limparPedido() para resetar o visor
 // ====================================================
+
+function limparPedido() {
+  visor.value = 0;
+}
